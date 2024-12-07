@@ -1,5 +1,8 @@
+"use client";
 import React, { useState } from "react";
 import { FaStar, FaEye, FaEdit, FaTrashAlt } from "react-icons/fa";
+
+
 
 const ProductTable = () => {
   const [products, setProducts] = useState([
@@ -29,17 +32,18 @@ const ProductTable = () => {
   };
 
   return (
-    <div className="p-4">
-      <div className="flex justify-between items-center mb-4">
-        <h1 className="text-xl font-bold">All Product List</h1>
+    <div className="p-4 bg">
+      <div className=" bg-slate-50flex flex justify-between items-center mb-4">
+        <h1 className="text-xl font-bold">Liste de tous les produits</h1>
         <div className="flex items-center gap-4">
           <button className="bg-orange-500 text-white px-4 py-2 rounded">
-            Add Product
+            Ajouter un produit
           </button>
-          <select className="border px-3 py-2 rounded">
-            <option value="this-month">This Month</option>
-            <option value="last-month">Last Month</option>
-            <option value="all-time">All Time</option>
+          <select className="border-none bg-slate-200  px-3 py-2 rounded">
+            <option value="this-month">Ce mois-ci</option>
+            <option value="last-month">Télécharger</option>
+            <option value="all-time">Exporter</option>
+            <option value="all-time">Importer</option>
           </select>
         </div>
       </div>
@@ -50,11 +54,11 @@ const ProductTable = () => {
             <th className="border p-2">
               <input type="checkbox" />
             </th>
-            <th className="border p-2">Product Name & Size</th>
-            <th className="border p-2">Price</th>
+            <th className="border p-2">Nom et taille du produit</th>
+            <th className="border p-2">Prix</th>
             <th className="border p-2">Stock</th>
-            <th className="border p-2">Category</th>
-            <th className="border p-2">Rating</th>
+            <th className="border p-2">Catégorie</th>
+            <th className="border p-2">Notation</th>
             <th className="border p-2">Action</th>
           </tr>
         </thead>
@@ -66,7 +70,14 @@ const ProductTable = () => {
               </td>
               <td className="border p-2 text-left">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gray-200 rounded-md"></div>
+                  <div className="w-12 h-12 bg-gray-200 rounded-md">
+                   <img 
+                   src="file.svg" 
+                   alt="description de l'image" 
+                   className="w-full h-full object-cover rounded-md" 
+                   />
+                  </div>
+
                   <div>
                     <p className="font-bold">{product.name}</p>
                     <p className="text-sm text-gray-500">
@@ -88,7 +99,7 @@ const ProductTable = () => {
                 </div>
               </td>
               <td className="border p-2">
-                <div className="flex items-center justify-center gap-2">
+                <div className="flex items-center justify-center gap-3 bg-black h-9">
                   <button
                     onClick={() => handleView(product.id)}
                     className="text-blue-500"
