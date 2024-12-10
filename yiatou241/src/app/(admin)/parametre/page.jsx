@@ -10,7 +10,7 @@ import { Link } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="overflow-y-auto">
       <div className="ml-0 position  relative transition-all 0.3 min-h-[100vh] pb-10">
   {/* Start Container Fluid */}
   <div className="w-full pr-[1.5rem] pl-[1.5rem] mr-auto ml-auto">
