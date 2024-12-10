@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "@fortawesome/fontawesome-free": "^6.7.1",
+>>>>>>> 99a0ee066d36ffe17874c7ba984a6a88a4c21684
     "@iconify/react": "^5.1.0",
     "lucide-react": "^0.468.0",
     "next": "15.0.4",

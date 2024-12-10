@@ -179,7 +179,7 @@ export default function Sidebar() {
             <li className="nav-item">
               <a
                 className={`flex items-center gap-4 text-[#5b626e] hover:text-white `}
-                href="settings.html"
+                href="/parametre"
               >
                 <span className="text-2xl">
                   <Icon icon="solar:settings-bold-duotone" />
