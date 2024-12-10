@@ -291,6 +291,7 @@ const ProductInformation = () => {
               onChange={(e) => setProductWeight(e.target.value)}
             />
           </div>
+          
         </div>
       </div>
     </div>
@@ -335,6 +336,48 @@ const ProductCard = () => {
           <span className="text-red-600 font-bold">$80</span>{" "}
           <span className="text-green-500">(30% de réduction)</span>
         </p>
+        <div>
+  {/* Section Size */}
+  <h5 className="text-sm font-medium text-gray-700">Size</h5>
+  <div className="flex gap-4 flex-wrap mt-2">
+    {['XS', 'S', 'M', 'XL', 'XXL', '3XL'].map((sizeOption) => (
+      <button
+        key={sizeOption}
+        className="px-4 py-2 rounded-lg text-white bg-blue-500 transition duration-300 transform hover:scale-105 hover:bg-blue-600"
+      >
+        {sizeOption}
+      </button>
+    ))}
+  </div>
+
+  {/* Section Colors */}
+  <h5 className="text-sm font-medium text-gray-700 mt-6">Colors</h5>
+  <div className="flex gap-4 flex-wrap mt-2">
+    {[
+      { name: 'Red', hex: '#EF4444' }, 
+      { name: 'Green', hex: '#10B981' }, 
+      { name: 'Blue', hex: '#3B82F6' }, 
+      { name: 'Yellow', hex: '#F59E0B' }, 
+      { name: 'Purple', hex: '#8B5CF6' }
+    ].map((color) => (
+      <button
+        key={color.name}
+        className="w-10 h-10 rounded-full border-2 border-gray-300 transition duration-300 transform hover:scale-110"
+        style={{ backgroundColor: color.hex }}
+      />
+    ))}
+  </div>
+</div>
+<div className="flex justify-evenly mt-10">
+  {/* Bouton Ajouter au panier */}
+  <button className="w-32 py-3 bg-blue-500 text-white rounded-md transition duration-300 transform hover:scale-105 hover:bg-blue-600">
+    Ajouter au panier
+    </button>
+    <button className="w-32 py-3 bg-orange-400 text-white rounded-md transition duration-300 transform hover:scale-105 hover:bg-orange-600">
+    Annuler
+    </button>
+</div>
+
       </div>
 
       {/* Formulaire d'ajout d'image */}
@@ -366,6 +409,9 @@ const ProductCard = () => {
                1600 x 1200 (4:3) recommandé. PNG, JPG et GIF sont autorisés.
              </p>
           </div>
+          
+
+          
           
         
            
