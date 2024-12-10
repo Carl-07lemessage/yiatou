@@ -7,7 +7,7 @@ export default function Navbar() {
   const [isUserMenuOpen, setUserMenuOpen] = useState(false);
 
   return (
-    <div className="container-fluid bg-gray-50 min-h-screen ">
+    <div className="container-fluid bg-gray-50">
       {/* Navbar Header */}
       <div className="navbar-header flex justify-between items-center py-4 px-6 bg-white shadow-md rounded-lg mb-6">
         {/* Left Section */}
