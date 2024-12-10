@@ -1,4 +1,5 @@
 import Sidebar from "../components/Sidebar";
+import Nav from "../components/Nav";
 
 export default function RootLayout({ children }) {
   return (
@@ -9,8 +10,9 @@ export default function RootLayout({ children }) {
             <Sidebar />
           </div>
 
-          {/* <AdminNavbar data={data} /> */}
+          
           <div className="flex flex-col w-4/5 lg:overflow-y-auto">
+          <Nav />
             {children}
           </div>
         </div>
