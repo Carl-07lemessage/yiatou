@@ -1,101 +1,145 @@
-"use client"
-import { useState } from 'react';
-import { BsPersonCircle, BsFillBellFill } from "react-icons/bs";
+"use client";
+import { useState } from "react";
+import { Icon } from "@iconify/react";
 
 export default function Navbar() {
-  // État pour gérer la visibilité des menus déroulants
-  const [showNotifications, setShowNotifications] = useState(false);
-  const [showUserMenu, setShowUserMenu] = useState(false);
-
-  const [notifications] = useState([
-    { id: 1, title: 'Nouvelle notification', description: 'Bienvenue sur votre tableau de bord!' },
-    { id: 2, title: 'Message reçu', description: 'Vous avez un nouveau message' },
-    { id: 3, title: 'Système', description: 'Mise à jour effectuée' },
-  ]);
+  const [isNotificationMenuOpen, setNotificationMenuOpen] = useState(false);
+  const [isUserMenuOpen, setUserMenuOpen] = useState(false);
 
   return (
-    <div className="animate__animated animate__fadeIn min-h-full">
-      <div className="navbar-header animate__animated animate__slideInDown bg-white bg-opacity-95 backdrop-blur-lg p-6 rounded-3xl shadow-lg mx-8 mt-8">
-        <div className="flex items-center justify-between">
-          <div className="topbar-item">
-            <h4 className=" text-grey-200 font-extrabold text-xl uppercase tracking-wide mb-0">Bienvenue!</h4>
-          </div>
-          <div className="flex justify-center items-center gap-7">
-            {/* Notifications */}
-            <div className="dropdown topbar-item relative">
-              <button
-                className="topbar-button bg-white px-4 py-4 rounded-full relative"
-                onClick={() => setShowNotifications(!showNotifications)} // Toggle notifications
-              >
-                <span className="avatar-sm bg-orange-500 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center translate-x-2 duration-150 hover:rotate-12 hover:scale-125" data-icon="solar:bell-bing-bold-duotone"><BsFillBellFill /></span>
-                <span className="absolute top right-2 translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">3</span>
-              </button>
-              {/* Menu des notifications (visible seulement si showNotifications est vrai) */}
-              {showNotifications && (
-                <div className="dropdown-menu absolute right-0 bg-white shadow-lg rounded-xl p-6 mt-4 w-72 backdrop-blur-md">
-                  <div className="notification-header flex justify-between items-center pb-4 border-b-2 border-orange-200">
-                    <h6 className="text-lg font-semibold">Notifications</h6>
-                    <button className="text-orange-500 text-sm underline">Tout effacer</button>
-                  </div>
-                  <div className="notification-container max-h-80 overflow-y-auto mt-4">
-                    {notifications.map((notification) => (
-                      <div key={notification.id} className="notification-item flex items-center gap-4 py-3 hover:bg-orange-100 rounded-lg transition-all duration-300">
-                        <div className="avatar-sm bg-orange-500 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center">
-                          {notification.title[0]}
-                        </div>
-                        <div className="flex-grow">
-                          <p className="mb-0">
-                            <span className="font-semibold">{notification.title}</span>
-                            <span className="text-gray-500"> - {notification.description}</span>
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
+    <div className="container-fluid bg-gray-50 min-h-screen ">
+      {/* Navbar Header */}
+      <div className="navbar-header flex justify-between items-center py-4 px-6 bg-white shadow-md rounded-lg mb-6">
+        {/* Left Section */}
+        <div className="flex items-center space-x-4">
+          {/* Menu Toggle */}
+          <button
+            type="button"
+            className="text-xl p-2 rounded-lg hover:bg-gray-100 transition"
+            aria-label="Toggle menu"
+          >
+          </button>
+          <h4 className="text-2xl font-semibold text-gray-800 uppercase">
+            Bienvenue
+          </h4>
+        </div>
 
-            {/* Menu utilisateur */}
-            <div className="dropdown topbar-item relative">
-              <button
-                className="topbar-button bg-white  px-4 py-4 rounded-full"
-                onClick={() => setShowUserMenu(!showUserMenu)} // Toggle menu utilisateur
-              >
-                <div className="avatar-sm bg-orange-500 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center  translate-x-2 duration-150 hover:rotate-12 hover:scale-125">
-                <BsPersonCircle/>
-                </div>
-              </button>
-              {/* Menu utilisateur (visible seulement si showUserMenu est vrai) */}
-              {showUserMenu && (
-                <div className="dropdown-menu absolute right-0 bg-white shadow-lg rounded-xl p-6 mt-4 w-72">
-                  <h6 className="dropdown-header text-lg font-semibold">Bienvenue!</h6>
-                  <a href="#" className="dropdown-item py-2 text-sm flex items-center gap-2 hover:bg-orange-200 rounded-lg">
-                     Profile
-                  </a>
-                  <a href="#" className="dropdown-item py-2 text-sm flex items-center gap-2 hover:bg-orange-200 rounded-lg">
-                     Messages
-                  </a>
-                  <a href="#" className="dropdown-item py-2 text-sm flex items-center gap-2 hover:bg-orange-200 rounded-lg">
-                    Paramètres
-                  </a>
-                  <div className="dropdown-divider my-4"></div>
-                  <a href="#" className="dropdown-item text-red-500 py-2 text-sm flex items-center gap-2 hover:bg-orange-200 rounded-lg">
-                   Déconnexion
-                  </a>
-                </div>
-              )}
-            </div>
-          </div>
-          <form className="app-search d-none d-md-block ms-2 flex">
+        {/* Right Section */}
+        <div className="flex items-center gap-4">
+          
+          {/* Notification Menu */}
           <div className="relative">
+            <button
+              type="button"
+              className="p-2 rounded-lg hover:bg-gray-100 transition"
+              onClick={() => setNotificationMenuOpen(!isNotificationMenuOpen)}
+              aria-haspopup="true"
+              aria-expanded={isNotificationMenuOpen}
+            >
+              <Icon icon="solar:bell-bing-bold-duotone" className="text-xl align-middle" />
+              <span className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                3
+              </span>
+            </button>
+            {isNotificationMenuOpen && (
+              <div className="absolute right-0 mt-2 w-72 bg-white shadow-lg rounded-lg p-3 space-y-2 max-h-72 overflow-y-auto">
+                <div className="flex justify-between items-center">
+                  <h6 className="text-lg font-semibold">Notifications</h6>
+                  <button
+                    onClick={() => console.log("Clear All")}
+                    className="text-gray-500 text-sm"
+                  >
+                    Clear All
+                  </button>
+                </div>
+                {[1, 2].map((_, idx) => (
+                  <div key={idx} className="flex items-center py-3 border-b">
+                    <img
+                      src="assets/images/users/avatar-3.jpg"
+                      className="w-8 h-8 rounded-full me-2"
+                      alt="avatar"
+                    />
+                    <div>
+                      <p className="font-medium">Jacob Gines</p>
+                      <p className="text-sm text-gray-600">A répondu à votre commentaire.</p>
+                    </div>
+                  </div>
+                ))}
+                <div className="text-center pt-3">
+                  <button className="bg-blue-600 text-white text-sm py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+                    Voir toutes les notifications
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Settings Button */}
+          <button
+            type="button"
+            className="p-2 rounded-lg hover:bg-gray-100 transition"
+            aria-label="Settings"
+          >
+            <Icon icon="solar:settings-bold-duotone" className="text-xl align-middle" />
+          </button>
+
+          {/* Clock Button */}
+          <button
+            type="button"
+            className="p-2 rounded-lg hover:bg-gray-100 transition"
+            aria-label="Clock"
+          >
+            <Icon icon="solar:clock-circle-bold-duotone" className="text-xl align-middle" />
+          </button>
+
+          {/* User Dropdown */}
+          <div className="relative">
+            <button
+              type="button"
+              className="flex items-center space-x-2"
+              onClick={() => setUserMenuOpen(!isUserMenuOpen)}
+              aria-haspopup="true"
+              aria-expanded={isUserMenuOpen}
+            >
+              <img
+                src="assets/images/users/avatar-3.jpg"
+                className="w-8 h-8 rounded-full"
+                alt="avatar"
+              />
+              <span className="font-medium text-gray-800">Gaston</span>
+            </button>
+            {isUserMenuOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-2 space-y-2">
+                <h6 className="text-gray-600 text-sm">Bienvenue Gaston!</h6>
+                <a href="pages-profile.html" className="flex items-center gap-2 text-gray-800">
+                  <Icon icon="bx:user-circle" />
+                  Profile
+                </a>
+                <a href="apps-chat.html" className="flex items-center gap-2 text-gray-800">
+                  <Icon icon="bx:message-dots" />
+                  Messages
+                </a>
+                <a href="auth-signin.html" className="flex items-center gap-2 text-red-600">
+                  <Icon icon="bx:log-out" />
+                  Deconnexion
+                </a>
+              </div>
+            )}
+          </div>
+
+          {/* Search Form */}
+          <form className="relative flex justify-evenly items-center">
             <input
               type="search"
-              className="form-control p-4 pl-10 pr-4 rounded-full bg-white bg-opacity-95 border-2 border-orange-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-300"
-              placeholder="Rechercher..."
+              className="py-2 px-4 rounded-lg border border-gray-300"
+              placeholder="Search..."
+              autoComplete="off"
             />
-          </div>
-        </form>
+            <Icon
+              icon="solar:magnifer-linear"
+              className="absolute top-3 left-3 mr-4 text-gray-500"
+            />
+          </form>
         </div>
       </div>
     </div>
