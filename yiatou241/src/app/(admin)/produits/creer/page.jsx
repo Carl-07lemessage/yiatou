@@ -220,7 +220,7 @@
 
 import React, { useState } from "react";
 import { WiCloudUp } from "react-icons/wi";
-import ProduitInformation from "../../components/Forme.jsx";
+import ProduitInformation from "../../../components/Forme.jsx";
 
 
 
