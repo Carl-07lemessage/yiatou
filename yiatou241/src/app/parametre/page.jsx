@@ -4,6 +4,7 @@ import { AiFillSetting } from "react-icons/ai";
 import { IoStorefrontSharp } from "react-icons/io5";
 import { ImLocation } from "react-icons/im";
 import { GiCardboardBoxClosed } from "react-icons/gi";
+import { Link } from "lucide-react";
 
 
 
@@ -403,7 +404,7 @@ export default function Home() {
               </div>
             </form>
             <form>
-              <div className>
+              <div className="mb-[1.5rem] block isolate">
                 <label htmlFor="mex-vouchers" className="mb-[0.4rem] text-[0.875rem] decoration-[#5d7186] font-medium inline-block cursor-default">Maximum Vouchers</label>
                 <input type="number" id="mex-vouchers" className="block w-full pt-[0.5rem] pb-[0.5rem]  pr-[1rem] pl-[1rem] text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-[#ffff] bg-clip-padding border-[1px] border[#d8dfe7] rounded-[0.5rem] transition ease-in-out" placeholder={1000} defaultValue={12} />
               </div>
@@ -553,8 +554,8 @@ export default function Home() {
       </div>
     </div>
     <div className="text-right block isolate">
-      <a href="#!" className="text-white bg-[#ef5f5f] border-[1px] px-[1rem] py-[0.5rem] border-[#ef5f5f] hover:text-white disabled:text-white disabled:bg-[#ef5f5f] disabled:border-[#ef5f5f] hover:bg-[#d75656] shadow shadow-[241, 119, 119] active:text-white active:bg-[#bf4c4c] active:border-[#b34747] active:shadow inset-[0 3px 5px rgba(0, 0, 0, 0.125)]">Cancel</a>
-      <a href="#!" className="btn btn-success">Save Change</a>
+      <Link href="#!" className="text-white bg-[#ef5f5f] leading-[1.5] py-[0.5rem] px-[1rem] inline-block shadow-lg disabled:opacity-[0.65] focus:shadow-[241, 119, 119] border-[1px] border-[#ef5f5f] rounder-[1px] rounded-[#ef5f5f] shadow-[0px 2px 6px 0px] cursor-pointer select-none  text-[ 0.875rem] font-normal border-[1px] px-[1rem] py-[0.5rem] border-[#ef5f5f] hover:text-white disabled:text-white disabled:bg-[#ef5f5f] disabled:border-[#ef5f5f] hover:bg-[#d75656] shadow shadow-[241, 119, 119] active:text-white active:bg-[#bf4c4c] active:border-[#b34747] active:shadow inset-[0 3px 5px rgba(0, 0, 0, 0.125)]">Cancel</Link>
+      <Link href="#!" className="btn btn-success">Save Change</Link>
     </div>
   </div>  
 </div>
