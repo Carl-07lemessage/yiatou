@@ -61,7 +61,7 @@ export default function Sidebar() {
             <li className="nav-item">
               <a
                 className={`flex items-center gap-4 text-[#5b626e] hover:text-white `}
-                href="#sidebarProducts"
+                href="/produits"
                 data-bs-toggle="collapse"
                 role="button"
                 aria-expanded="false"
