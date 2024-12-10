@@ -111,15 +111,15 @@ export default function Navbar() {
             {isUserMenuOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-2 space-y-2">
                 <h6 className="text-gray-600 text-sm">Bienvenue Gaston!</h6>
-                <a href="pages-profile.html" className="flex items-center gap-2 text-gray-800">
+                <a href="pages-profile.html" className="flex items-center gap-4 text-gray-800 hover:bg-orange-300">
                   <Icon icon="bx:user-circle" />
                   Profile
                 </a>
-                <a href="apps-chat.html" className="flex items-center gap-2 text-gray-800">
+                <a href="apps-chat.html" className="flex items-center gap-4 text-gray-800 hover:bg-orange-300">
                   <Icon icon="bx:message-dots" />
                   Messages
                 </a>
-                <a href="auth-signin.html" className="flex items-center gap-2 text-red-600">
+                <a href="auth-signin.html" className="flex items-center gap-4 text-orange-600 hover:bg-orange-300">
                   <Icon icon="bx:log-out" />
                   Deconnexion
                 </a>
