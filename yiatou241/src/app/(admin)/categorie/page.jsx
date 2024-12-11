@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { Icon } from "@iconify/react";
+import Image from "next/image"
 
 export default function Home() {
   const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -74,10 +75,12 @@ export default function Home() {
               <div
                 className={`${category.bgColor} rounded-full flex items-center justify-center mx-auto p-6 hover:bg-opacity-80 transition-all duration-300`}
               >
-                <img
+                <Image
                   src={category.img}
                   alt={category.name}
-                  className="w-24 h-24 object-cover transition-transform transform hover:scale-110"
+                  height={48}
+                  width={48}
+                  className="object-cover transition-transform transform hover:scale-110"
                 />
               </div>
               <h4 className="mt-3 mb-0 text-lg font-semibold text-gray-700 transition-all duration-300 hover:text-orange-500">
@@ -161,11 +164,12 @@ export default function Home() {
                     <td className="px-4 py-2">
                       <div className="flex items-center gap-2">
                         <div className="rounded bg-gray-200 w-16 h-16 flex items-center justify-center">
-                          <img
+                          <Image
                             src={product.img}
                             alt={product.name}
+                            layout="fill"
                             className="w-full h-full object-cover transition-transform transform hover:scale-110"
-                          />
+                          />git 
                         </div>
                         <p className="text-gray-800 font-medium text-sm">{product.name}</p>
                       </div>
