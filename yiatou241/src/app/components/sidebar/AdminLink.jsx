@@ -1,39 +1,36 @@
 'use client';
 
-import Image from "next/image";
+
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
 
-export function AdminLink({ href, icone, counter, children }) {
+export function AdminLink({ href, icon, titre }) {
     const pathname = usePathname();
 
-        // Normalise les chemins pour une comparaison cohérente
-        const normalizedPathname = pathname.replace(/\/+$/, '');  // Supprime les barres obliques finales
-        const normalizedHref = href.replace(/\/+$/, ''); 
+    // Normalise les chemins en supprimant les barres obliques finales pour une comparaison cohérente
+    const normalizedPathname = pathname === '/' ? pathname : pathname.replace(/\/+$/, '');
+    const normalizedHref = href === '/' ? href : href.replace(/\/+$/, '');
 
-    // Vérifie si le lien est actif pour la page ou une sous-page
+    // Vérifie si le lien est actif pour la page racine ou une sous-page
     const isActive =
-        normalizedPathname === normalizedHref || // Actif si les chemins sont exactement égaux
-        (normalizedPathname.startsWith(normalizedHref) && normalizedHref !== '/'); // Actif pour les sous-pages mais pas pour la racine
+        (normalizedHref === '/' && normalizedPathname === '/') || // Active uniquement pour la page d'accueil
+        (normalizedHref !== '/' && (normalizedPathname === normalizedHref || normalizedPathname.startsWith(`${normalizedHref}/`)));
 
     return (
-        <div className="flex items-center justify-between">
-            <Link href={href} legacyBehavior>
-                <a
-                    className={`has-icon ${isActive ? '!text-[#D5711C]' : 'text-white'
-                        } md:border-0 md:hover:text-[#22AAC6]`}
-                >
-                    <span className="icon"><i className={icone}></i></span>
-                    <span className="menu-item-label">{children}</span>
-                </a>
-            </Link>
-            {counter != null && ( // Vérifie si counter est défini
-                <p className="flex items-center text-[9px] justify-center w-6 h-5 font-semibold text-blue-800 bg-blue-200 rounded-full mr-4">
-                    {counter}
-                </p>
-            )}
-        </div>
+        <li className={`${isActive ? ' border-l-4 !border-[#D5711C]' : ' text-[#5b626e] hover:text-white'} px-7 py-2 `}>
+        <a
+          className={`flex items-center ${isActive ? '!text-[#D5711C]' : ' text-[#5b626e] hover:text-white'}  gap-4 `}
+          href={href}
+        >
+          <span className={`text-2xl ${isActive ? '!text-[#D5711C]' : ' text-[#5b626e] hover:text-white'} transition-colors duration-300`}>
+            {icon}
+          </span>
+          <span className={`hidden md:flex transition-colors ${isActive ? '!text-[#fff]' : ' text-[#5b626e] hover:text-white'}  duration-300`}>
+            {titre}
+          </span>
+        </a>
+      </li>
     );
 }

@@ -3,20 +3,19 @@ import Nav from "../components/Nav";
 
 export default function RootLayout({ children }) {
   return (
- 
-      <section>
-        <div className="flex overflow-y-hidden">
-          <div className="md:w-1/5 hidden relative lg:block overflow-y-hidden ">
-            <Sidebar />
-          </div>
+    <section className="h-screen overflow-hidden">
+    <div className="flex h-full">
+      <div className="overflow-y-hidden md:w-1/5">
+        <Sidebar />
+      </div>
 
-          
-          <div className="flex flex-col w-4/5 lg:overflow-y-auto">
+      <div className="flex overflow-y-auto flex-col md:w-4/5 ">
+        <div className="fixed md:w-4/5">
           <Nav />
-            {children}
-          </div>
         </div>
-      </section>
-
+        <div className=" mt-[100px]">{children}</div>
+      </div>
+    </div>
+  </section>
   );
 }
