@@ -1,96 +1,111 @@
-"use client"
+
 import React from "react";
 
 export default function LoginPage() {
-  const handleGoogleLogin = () => {
-    console.log("Connexion avec Google");
-  };
-
-  const handleFacebookLogin = () => {
-    console.log("Connexion avec Facebook");
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Connexion classique");
-  };
-
-
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
-        <h2 className="text-2xl font-bold text-center text-green-700 mb-6">
-          Connectez-vous à votre compte
-        </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
+    <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-white">
+      {/* Section gauche */}
+      <div className="w-full md:w-1/2 px-6 md:px-16 lg:px-32 py-12 flex flex-col space-y-6 bg-white shadow-md">
+        <div className="auth-logo mb-6 flex justify-start space-x-4">
+          {/* Logo */}
+          <a href="index.html" className="block">
+            <img
+              src="/logo-dark.png"
+              alt="Logo dark"
+              className="h-8 sm:h-6"
+            />
+          </a>
+        </div>
+
+        <h1 className="text-2xl font-semibold text-gray-800 mb-4">
+          Se connecter
+        </h1>
+        <p className="text-gray-600 text-center md:text-start">
+          Entrez votre nom et votre mot de passe pour accéder au panneau
+          d'administration.
+        </p>
+
+        <form className="w-full max-w-sm mx-auto md:mx-0">
+          <div className="mb-4">
             <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-600"
+              htmlFor="nam"
+              className="block text-sm font-medium text-gray-700"
             >
-              Adresse email
+              Nom
             </label>
             <input
-              type="email"
-              id="email"
-              placeholder="Adresse email"
+              type="text"
+              id="nam"
+              name="nam"
+              placeholder="Entrez votre nom"
+              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
               required
-              className="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
-          <div>
+
+          <div className="mb-4">
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-600"
+              className="block text-sm font-medium text-gray-700"
             >
               Mot de passe
             </label>
             <input
               type="password"
               id="password"
-              placeholder="Mot de passe"
+              name="password"
+              placeholder="Entrez votre mot de passe"
+              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
               required
-              className="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
+            <div className="mt-2 text-right">
+              <a href="#" className="text-orange-500 text-sm hover:underline">
+                Réinitialiser le mot de passe
+              </a>
+            </div>
           </div>
+
+          <div className="mb-4 flex items-center">
+            <input
+              type="checkbox"
+              id="remember"
+              name="remember"
+              className="h-4 w-4 text-orange-500 border-gray-300 rounded"
+            />
+            <label
+              htmlFor="remember"
+              className="ml-2 text-sm text-gray-600"
+            >
+              Souviens-toi de moi
+            </label>
+          </div>
+
           <button
             type="submit"
-            className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+            className="w-full py-2 px-4 bg-orange-500 text-white rounded-md hover:bg-orange-600 focus:outline-none"
           >
             Se connecter
           </button>
         </form>
 
-        <div className="my-6 flex items-center">
-          <hr className="flex-grow border-gray-300" />
-          <span className="mx-3 text-sm text-gray-500">Ou continuez avec</span>
-          <hr className="flex-grow border-gray-300" />
+        <div className="mt-6 text-sm text-gray-600 text-center md:text-start">
+          Vous n'avez pas de compte ?{" "}
+          <a href="#" className="text-orange-600 hover:underline">
+            Inscrivez-vous
+          </a>
         </div>
+      </div>
 
-        <div className="flex gap-4">
-          <button
-            onClick={handleGoogleLogin}
-            className="flex-1 flex items-center justify-center bg-white-500 text-black py-2 rounded-lg hover:bg-white-600 transition"
-          >
-              <img src="/google-remove.png" alt="/google.png" className="w-[24px] h-[24px]" />
-
-          </button>
-
-          <button
-            onClick={handleFacebookLogin}
-            className="flex-1 flex items-center justify-center bg-white-600 text-white py-2 rounded-lg hover:bg-white-700 transition"
-          >
-            <img src="/facebook-circle-fill.svg" alt="/google.png" className="w-[24px] h-[24px]" />
-            
-            Facebook
-          </button>
+      {/* Section droite */}
+      <div className="hidden md:flex w-full md:w-1/2 h-full items-center justify-center bg-white">
+        <div className="w-full max-w-lg p-4 md:p-6">
+          <img
+            src="/img-10.jpg"
+            alt="Image description"
+            className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-lg shadow-lg"
+          />
         </div>
-
-        <p className="text-sm text-center text-blue-600 mt-6 hover:underline cursor-pointer">
-          Mot de passe oublié?
-        </p>
       </div>
     </div>
   );
 }
-
