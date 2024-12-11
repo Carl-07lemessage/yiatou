@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { FaStar, FaEye, FaEdit, FaTrashAlt } from "react-icons/fa";
 
 
@@ -74,8 +75,9 @@ const ProductTable = () => {
               <td className="border p-2 text-left">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gray-200 rounded-md">
-                   <img 
+                   <Image 
                    src="file.svg" 
+                   layout="fill"
                    alt="description de l'image" 
                    className="w-full h-full object-cover rounded-md" 
                    />

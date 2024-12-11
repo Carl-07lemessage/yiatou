@@ -98,6 +98,7 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import { FiEye, FiEdit2, FiTrash2 } from "react-icons/fi";
+import Image from "next/image";
 
 const WorkspaceTable = () => {
   return (
@@ -119,7 +120,7 @@ const WorkspaceTable = () => {
           {/* Rôle */}
           <div className="flex-1">
             <p className="text-sm font-medium text-gray-700">
-              Gestionnaire d'espace de travail
+              Gestionnaire d&apos;espace de travail
             </p>
           </div>
 
@@ -141,16 +142,18 @@ const WorkspaceTable = () => {
 
           {/* Utilisateurs */}
           <div className="flex-1 flex -space-x-2">
-            <img
+            <Image
               src="https://via.placeholder.com/32"
               alt="User 1"
+              layout="fill"
               className="w-8 h-8 rounded-full border-2 border-white"
             />
             <div className="w-8 h-8 flex items-center justify-center bg-pink-500 text-white text-sm font-bold rounded-full border-2 border-white">
               P
             </div>
-            <img
+            <Image
               src="https://via.placeholder.com/32"
+              layout="fill"
               alt="User 2"
               className="w-8 h-8 rounded-full border-2 border-white"
             />

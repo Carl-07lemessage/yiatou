@@ -159,7 +159,7 @@ const ProduitInformation = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="form-group">
-            <label htmlFor="product-id" className="block text-sm font-medium text-gray-700">Numéro d'étiquette</label>
+            <label htmlFor="product-id" className="block text-sm font-medium text-gray-700">Numéro d&apos;étiquette</label>
             <input
               type="number"
               id="product-id"

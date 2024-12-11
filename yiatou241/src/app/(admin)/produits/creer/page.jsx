@@ -1,6 +1,7 @@
 
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 import { WiCloudUp } from "react-icons/wi";
 import ProduitInformation from "../../../components/Forme.jsx";
@@ -29,7 +30,8 @@ const ProductCard = () => {
       {/* Product Card */}
       <div className="w-full md:w-1/3 bg-white p-4 rounded-md shadow-md">
         <div className="w-full h-40 bg-gray-200 rounded-md flex items-center justify-center">
-          <img
+          <Image
+          layout="fill"
             src={image || "URL_DE_L_IMAGE"}
             alt="Men Black Slim Fit T-shirt"
             className="h-full w-full object-contain"
@@ -92,7 +94,7 @@ const ProductCard = () => {
             </label>
             <input id="file-upload" type="file" accept="image/*" onChange={handleImageChange} className="hidden" />
             {image && (
-              <img src={image} alt="Aperçu" className="mt-4 h-40 w-full object-cover rounded-lg border" />
+              <Image layout="fill" src={image} alt="Aperçu" className="mt-4 h-40 w-full object-cover rounded-lg border" />
             )}
             <p className="text-gray-600 text-center mt-4">
               Déposez vos images ici, ou{" "}
