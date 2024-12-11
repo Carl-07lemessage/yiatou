@@ -50,8 +50,8 @@ const ProductTable = () => {
         </div>
       </div>
 
-      <table className="w-full border-collapse border border-gray-300">
-        <thead>
+      <table className="w-full border-collapse border  border-gray-300 overflow-x-auto p-4">
+        <thead className="">
           <tr className="bg-gray-100">
             <th className="border p-2">
               <input type="checkbox" />
