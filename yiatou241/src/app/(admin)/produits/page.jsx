@@ -32,24 +32,27 @@ const ProductTable = () => {
   };
 
   return (
-    <div className="p-4 bg">
-      <div className=" bg-slate-50flex flex justify-between items-center mb-4">
+    <div className="p-4 bg ">
+      <div className=" bg-slate-50flex flex justify-between items-center mb-4 w-full">
         <h1 className="text-xl font-bold">Liste de tous les produits</h1>
-        <div className="flex items-center gap-4">
-          <button className="bg-orange-500 text-white px-4 py-2 rounded">
-            Ajouter un produit
-          </button>
-          <select className="border-none bg-slate-200  px-3 py-2 rounded">
-            <option value="this-month">Ce mois-ci</option>
-            <option value="last-month">Télécharger</option>
-            <option value="all-time">Exporter</option>
-            <option value="all-time">Importer</option>
-          </select>
-        </div>
+        
+        <div className="flex flex-col items-start gap-4 md:flex-row">
+          <a href="/produits/creer">
+            <button className="bg-orange-500 text-white px-4 py-2 rounded w-full md:w-auto">
+             Ajouter 
+            </button>
+         </a>
+         <select className="border-none bg-slate-200 px-3 py-2 rounded w-full md:w-auto">
+           <option value="this-month">Ce mois-ci</option>
+           <option value="last-month">Télécharger</option>
+           <option value="all-time">Exporter</option>
+           <option value="all-time">Importer</option>
+        </select>
+       </div>
       </div>
-
-      <table className="w-full border-collapse border border-gray-300">
-        <thead>
+      <div className="overflow-x-auto ">
+      <table className="w-full border-collapse border  border-gray-300  p-4">
+        <thead className="">
           <tr className="bg-gray-100">
             <th className="border p-2">
               <input type="checkbox" />
@@ -99,7 +102,7 @@ const ProductTable = () => {
                 </div>
               </td>
               <td className="border p-2">
-                <div className="flex items-center justify-center gap-3 bg-black h-9">
+                <div className="flex items-center justify-center gap-3 h-9">
                   <button
                     onClick={() => handleView(product.id)}
                     className="text-blue-500"
@@ -124,6 +127,10 @@ const ProductTable = () => {
           ))}
         </tbody>
       </table>
+      </div>
+      
+ 
+
     </div>
   );
 };

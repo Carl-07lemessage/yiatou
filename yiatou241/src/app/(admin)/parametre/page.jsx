@@ -4,44 +4,45 @@ import { AiFillSetting } from "react-icons/ai";
 import { IoStorefrontSharp } from "react-icons/io5";
 import { ImLocation } from "react-icons/im";
 import { GiCardboardBoxClosed } from "react-icons/gi";
+import { Link } from "lucide-react";
 
 
 
 export default function Home() {
   return (
     <div className="overflow-y-auto">
-      <div className="ml-0 transition-all 0.3 min-h-[100vh] pb-10">
+      <div className="ml-0 relative transition-all 0.3 min-h-[100vh] pb-10">
   {/* Start Container Fluid */}
-  <div className="w-full pr-[1.5rem] pl-[1.5rem] mr-auto ml-auto">
-    <div className="flex flex-wrap mt-0 mr-[1.5rem] ml-[1.5rem]">
+  <div className="w-full mr-auto ml-auto ">
+    <div className="flex  flex-wrap mt-0 mr-[1.8rem] ml-[1.8rem] ">
       <div className="w-full flex-auto flex-grow-0 flex-shrink-0">
-        <div className="flex    md:flex-col min-w-0 text-[#5d7186] shadow-2xl shadow-[(0px 3px 4px 0px rgba(0, 0, 0, 0.03)] mb[1.5rem] bg-[#ffffff] bg-clip-border border-0 rounded-[0.75rem]">
-          <div className="rounded-[0.75rem] border-b-[#eaedf1] border-2 mt-0 p-[1.125rem] mb-0 bg-transparent">
-            <h4 className="text-[1rem] flex items-center font-semibold m-0 text-[#313b5e] leading-[1.1]   gap-[0.375rem]"><AiFillSetting className="text-orange-600 opacity-[1] text-[20px]"/>General Settings</h4>
+        <div className="shadow-xl w-full shadow-[(0px 3px 4px 0px rgba(0, 0, 0, 0.03)] mb-[1.5rem] text-[#313b5e] border-0 border-b[#eaedf1] rounded-[0.75rem] bg-transparent bg-white m-[0.75rem] flex box- flex-col">
+          <div className=" border-b-[#eaedf1] border-b-2 mt-0 p-8 mb-0 bg-transparent ">
+            <h4 className="text-[1rem] font-semibold m-0 flex items-center gap-[0.375rem] px-9 text-[#313b5e]"><AiFillSetting className="text-orange-600 opacity-[1] text-[20px]"/>General Settings</h4>
           </div>
-          <div className="flex-wrap-[1]   flex-grow-[1] flex-shrink-[1] flex-auto py-[1.5rem] px-[1.5rem]  ">
+          <div className="flex-1 w-full  flex-col lg:flex-grow-1 lg:flex-shrink-1 p-[1.5rem]">
             <div className="flex flex-wrap mt-0 mr-[1.5rem] ml-[1.5rem]">
-              <div className="   flex-shrink-0 w-full max-w-full pr-[1.5rem] pl-[1.5rem] mt-0 ">
-                <form className="block mt-[0em]">
-                  <div className="mb-3 ">
-                    <label htmlFor="meta-name" className="mb-[0.4rem] text-[ 0.875rem] font-medium text-[#5d7186]">Meta Title</label>
-                    <input type="text" id="meta-name" className="block w-full m-0 p-[1rem] text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] rounded-[0.5rem] ease-in-out duration-[0.15s] delay-0 " placeholder="Title" />
+              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+                <form className="block mt-[0em] ">
+                  <div className="mb-[1.5rem] block isolate ">
+                    <label htmlFor="meta-name" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Meta Title</label>
+                    <input type="text" id="meta-name" className="block p-2 p order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s]" placeholder="Title" />
                   </div>
                 </form>
               </div>
-              <div className="   flex-shrink-0 w-full max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <form className="block mt-[0em]">
-                  <div className="mb-3 ">
-                    <label htmlFor="meta-tag" className="mb-[0.4rem] text-[ 0.875rem] font-medium text-[#5d7186]">Meta Tag Keyword</label>
-                    <input type="text" id="meta-tag" className="block w-full p-[1rem] text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] rounded-[0.5rem] ease-in-out duration-[0.15s] delay-0 " placeholder="Enter word" />
+                  <div className="mb-[1.5rem] block isolate ">
+                    <label htmlFor="meta-tag" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Meta Tag Keyword</label>
+                    <input type="text" id="meta-tag" className="block p-2 order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s]" placeholder="Enter word" />
                   </div>
                 </form>
               </div>
-              <div className="   flex-shrink-0 w-full max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <form className="block mt-[0em]">
-                  <div className="mb-3 ">
+                  <div className="mb-[1.5rem] block isolate ">
                     <label htmlFor="themes" className="mb-[0.4rem] text-[ 0.875rem] font-medium text-[#5d7186]">Store Themes</label>
-                    <select className=" cursor-pointer mb-[10px]    overflow-hidden text-sm block w-full p-[1rem] text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] rounded-[0.5rem] ease-in-out duration-[0.15s] delay-0 " id="themes" data-choices data-choices-groups data-placeholder="Select Themes">
+                    <select className=" cursor-pointer mb-[10px] position relative overflow-hidden text-sm block w-full p-2 text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] rounded-[0.5rem] ease-in-out duration-[0.15s] delay-0 " id="themes" data-choices data-choices-groups data-placeholder="Select Themes">
                       <option value>Default</option>
                       <option value="Dark">Dark</option>
                       <option value="Minimalist">Minimalist</option>
@@ -50,13 +51,11 @@ export default function Home() {
                   </div>
                 </form>
               </div>
-              <div className=" flex-shrink-0 w-full max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
-                <form className="block mt-[0em]"
-                
-                >
-                  <div className="mb-3 flex flex-col">
+              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+                <form className="block mt-[0em]">
+                  <div className="mb-[1.5rem] block isolate">
                     <label htmlFor="layout" className="mb-[0.4rem] text-[ 0.875rem] font-medium text-[#5d7186]">Layout</label>
-                    <select className="block mb-[10px] cursor-pointer    overflow-hidden text-sm w-full p-[1rem] text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] rounded-[0.5rem] ease-in-out duration-[0.15s] delay-0 " id="layout" data-choices data-choices-groups data-placeholder="Select Layout">
+                    <select className=" cursor-pointer mb-[10px] position relative overflow-hidden text-sm block w-full p-2 text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] rounded-[0.5rem] ease-in-out duration-[0.15s] delay-0  " id="layout" data-choices data-choices-groups data-placeholder="Select Layout">
                       <option className="p-[1rem]" value>Default</option>
                       <option  className="p-[1rem]" value="Electronics">Electronics</option>
                       <option  className="p-[1rem]" value="Fashion">Fashion</option>
@@ -80,41 +79,41 @@ export default function Home() {
     </div>
 
     {/* paramètres du magasin */}
-    <div className="flex flex-wrap mr-[1.5rem] ml-[1.5rem] mt-20">
-      <div className=" w-full flex-shrink-0 flex-grow-0 flex-auto max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
-        <div className="shadow-xl shadow-[(0px 3px 4px 0px rgba(0, 0, 0, 0.03)] mb-[1.5rem] text-[#313b5e] border-0 border-b[#eaedf1] rounded-[0.75rem] py-[1.125rem] px-[1.5rem] bg-transparent bg-white m-[0.75rem] flex box- flex-col">
-          <div className="rounded-[0.75rem] border-b-[#eaedf1] border-2 mt-0 p-[1.125rem] mb-0 bg-transparent">
-            <h4 className="text-[1rem] font-semibold m-0 flex items-center gap-[0.375rem] text-[#313b5e] "><IoStorefrontSharp className="opacity-[1] text-[20px] text-orange-600" /> Store Settings</h4>
+    <div className="flex flex-wrap  ">
+      <div className="position relative w-full flex-shrink-0 flex-grow-0 flex-auto max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+        <div className="shadow-xl shadow-[(0px 3px 4px 0px rgba(0, 0, 0, 0.03)] mb-[1.5rem] text-[#313b5e] border-0 border-b[#eaedf1] rounded-[0.75rem]  bg-transparent bg-white m-[0.75rem] flex box- flex-col">
+          <div className=" border-b-[#eaedf1] border-b-2 mt-0 p-8 mb-0 bg-transparent ">
+            <h4 className="text-[1rem] font-semibold m-0 flex items-center gap-[0.375rem] px-9 text-[#313b5e]"><IoStorefrontSharp className="opacity-[1] text-[20px] text-orange-600" /> Store Settings</h4>
           </div>
-          <div className="flex-1 flex-grow-1 flex-shrink-1 p-[1.5rem]">
+          <div className="flex-shrink-1 flex-grow-1 flex-auto p-[1.5rem]">
             <div className="flex flex-wrap mt-0 mr-[1.5rem] ml-[1.5rem]">
-              <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/2">
+              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <form className="block mt-[0em]">
                   <div className="mb-[1.5rem] block"> 
                     <label htmlFor="store-name" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Store Name</label>
-                    <input type="text" id="store-name" className="block order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s] " placeholder="Enter name" />
+                    <input type="text" id="store-name" className="block p-2 order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s]" placeholder="Enter name" />
                   </div>
                 </form>
               </div>
-              <div className=" flex-grow-0 flex-shrink-0 flex-auto w-1/2">
+              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <form className="block mt-[0em]">
                   <div className="mb-[1.5rem] block">
                     <label htmlFor="owner-name" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Store Owner Full Name</label>
-                    <input type="text" id="owner-name" className="block order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s] " placeholder="Full name" />
+                    <input type="text" id="owner-name" className="block p-2 order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s] " placeholder="Full name" />
                   </div>
                 </form>
               </div>
-              <div className=" flex-grow-0 flex-shrink-0 flex-auto w-1/2">
+              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <div className="mb-[1.5rem] block">
                   <label htmlFor="schedule-number" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Owner Phone number</label>
-                  <input type="number" id="schedule-number" name="schedule-number" className="block order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s] " placeholder="Number" />
+                  <input type="number" id="schedule-number" name="schedule-number" className="block  p-2 order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s] " placeholder="Number" />
                 </div>
               </div>
-              <div className=" flex-grow-0 flex-shrink-0 flex-auto w-1/2">
+              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/2 pl-[1.5rem] pr-[1.5rem">
                 <form  className="block mt-[0em]">
                   <div className="mb-[1.5rem] block">
                     <label htmlFor="schedule-email" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Owner Email</label>
-                    <input type="email" id="schedule-email" name="schedule-email" className="block order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s] " placeholder="Email" />
+                    <input type="email" id="schedule-email" name="schedule-email" className="block p-2 order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s] " placeholder="Email" />
                   </div>
                 </form>
               </div>
@@ -130,7 +129,7 @@ export default function Home() {
                 <form className="block mt-[0em]">
                   <div className="mb-[1.5rem] block">
                     <label htmlFor="your-zipcode" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Zip-Code</label>
-                    <input type="number" id="your-zipcode" className="block order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s] " placeholder="zip-code" />
+                    <input type="number" id="your-zipcode" className="p-2 block order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s] " placeholder="zip-code" />
                   </div>
                 </form>
               </div>
@@ -139,7 +138,7 @@ export default function Home() {
                 <form className="block mt-[0em]">
                   <div className="mb-[1.5rem] block">
                     <label htmlFor="choices-city" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">City</label>
-                    <select className="cursor-pointer m-0    overflow-hidden text-[16px] block" data-choices data-choices-groups data-placeholder="Select City" name="choices-city">
+                    <select className="cursor-pointer m-0 position relative p-2 overflow-hidden text-[16px] block  border-[1px] w-full rounded-[0.5rem]" data-choices data-choices-groups data-placeholder="Select City" name="choices-city">
                       <option value>Choose a city</option>
                       <optgroup label="UK">
                         <option value="London">London</option>
@@ -180,7 +179,7 @@ export default function Home() {
               <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/3">
                 <form className="block mt-[0em]">
                   <label htmlFor="choices-country" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Country</label>
-                  <select className="cursor-pointer m-0    overflow-hidden text-[16px] block" id="choices-country" data-choices data-choices-groups data-placeholder="Select Country" name="choices-country">
+                  <select className="cursor-pointer m-0 position relative overflow-hidden text-[16px] border-[1px] p-2  w-full rounded-[0.5rem]  block" id="choices-country" data-choices data-choices-groups data-placeholder="Select Country" name="choices-country">
                     <option value>Choose a country</option>
                     <optgroup label>
                       <option value>United Kingdom</option>
@@ -205,19 +204,19 @@ export default function Home() {
     </div>
 
     {/* paramètre de Localization */}
-    <div className="flex flex-wrap mt-0 mr-[1.5rem] ml-[1.5rem]">
-      <div className="   w-full flex-shrink-0 flex-grow-0 flex-auto max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
-        <div className="shadow-xl shadow-[(0px 3px 4px 0px rgba(0, 0, 0, 0.03)] mb-[1.5rem] text-[#313b5e] border-0 border-b[#eaedf1] rounded-[0.75rem] py-[1.125rem] px-[1.5rem] bg-transparent bg-white m-[0.75rem] flex box- flex-col">
-          <div className="rounded-[0.75rem]  border-b-[#eaedf1] border-2 mt-0 p-[1.125rem] mb-0 bg-transparent">
-            <h4 className="text-[1rem] font-semibold m-0 flex items-center gap-[0.375rem] text-[#313b5e]"><ImLocation className="opacity-[1] text-[20px] text-orange-600"/>Localization Settings</h4>
+    <div className="flex flex-wrap mt-0  mr-auto ml-auto">
+      <div className="position relative w-full flex-shrink-0 flex-grow-0 flex-auto max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+        <div className="shadow-xl shadow-[(0px 3px 4px 0px rgba(0, 0, 0, 0.03)] mb-[1.5rem] text-[#313b5e] border-0 border-b[#eaedf1] rounded-[0.75rem]  bg-transparent bg-white m-[0.75rem] flex box- flex-col">
+          <div className="border-b-[#eaedf1] border-b-2 mt-0 p-8 mb-0 bg-transparent">
+            <h4 className="text-[1rem] font-semibold m-0 flex items-center gap-[0.375rem] px-9 text-[#313b5e]"><ImLocation className="opacity-[1] text-[20px] text-orange-600"/>Localization Settings</h4>
           </div>
           <div className="flex-shrink-1 flex-grow-1 flex-auto p-[1.5rem]">
             <div className="flex flex-wrap mt-0 mr-[1.5rem] ml-[1.5rem]">
               <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <form  className="block mt-[0em]">
                   <div className="mb-[1.5rem] block">
-                    <label htmlFor="choices-country1" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Country</label>
-                    <select className="block order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s]" id="choices-country1" data-choices data-choices-groups data-placeholder="Select Country" name="choices-country">
+                    <label htmlFor="choices-country1" className="mb-[0.4rem] p-2 text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Country</label>
+                    <select className="block order-last p-2 m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s]" id="choices-country1" data-choices data-choices-groups data-placeholder="Select Country" name="choices-country">
                       <option value>Choose a country</option>
                       <optgroup label>
                         <option value>United Kingdom</option>
@@ -239,8 +238,8 @@ export default function Home() {
               <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <form  className="block mt-[0em]">
                   <div className="mb-[1.5rem] block">
-                    <label htmlFor="choices-language" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Language</label>
-                    <select className="block order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s]" id="choices-language" data-choices data-choices-groups data-placeholder="Select language" name="choices-language">
+                    <label htmlFor="choices-language" className="mb-[0.4rem] p-2  text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Language</label>
+                    <select className="block order-last m-0 p-2 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s]" id="choices-language" data-choices data-choices-groups data-placeholder="Select language" name="choices-language">
                       <option value>English</option>
                       <optgroup label>
                         <option value>Russian</option>
@@ -262,8 +261,8 @@ export default function Home() {
               <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <form className="block mt-[0em]">
                   <div className="mb-[1.5rem] block">
-                    <label htmlFor="choices-currency" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Currency</label>
-                    <select className="block order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s]" id="choices-currency" data-choices data-choices-groups data-placeholder="Select Currency" name="choices-currency">
+                    <label htmlFor="choices-currency" className="mb-[0.4rem] p-2 text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Currency</label>
+                    <select className="block order-last m-0 p-2 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s]" id="choices-currency" data-choices data-choices-groups data-placeholder="Select Currency" name="choices-currency">
                       <option value>Us Dollar</option>
                       <optgroup label>
                         <option value>Pound</option>
@@ -280,8 +279,8 @@ export default function Home() {
               <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <form className="block mt-[0em]">
                   <div className="mb-[1.5rem] block">
-                    <label htmlFor="choices-length" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Length Class</label>
-                    <select className="block order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s]" id="choices-length" data-choices data-choices-groups data-placeholder="Select Length" name="choices-length">
+                    <label htmlFor="choices-length" className="mb-[0.4rem] p-2 text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Length Class</label>
+                    <select className="block order-last p-2 m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s]" id="choices-length" data-choices data-choices-groups data-placeholder="Select Length" name="choices-length">
                       <option value>Centimeter</option>
                       <optgroup label>
                         <option value>Millimeter</option>
@@ -294,8 +293,8 @@ export default function Home() {
               <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <form>
                   <div className="mb-[1.5rem] block">
-                    <label htmlFor="choices-weight" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Weight Class</label>
-                    <select className="block order-last m-0 items-start cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s]" id="choices-weight" data-choices data-choices-groups data-placeholder="Select Weight" name="choices-weight">
+                    <label htmlFor="choices-weight" className="mb-[0.4rem] p-2 text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Weight Class</label>
+                    <select className="block order-last m-0 items-start p-2 cursor-text normal-case indent-0 drop-shadow-none tracking-normal w-full pt-[ 0.5rem]  pb-[ 0.5rem] pr-[1rem] pl-[1rem]  text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s]" id="choices-weight" data-choices data-choices-groups data-placeholder="Select Weight" name="choices-weight">
                       <option value>Kilogram</option>
                       <optgroup label>
                         <option value>Gram</option>
@@ -313,18 +312,18 @@ export default function Home() {
     </div>
 
     {/* catégories des paramètres */}
-    <div className="flex flex-wrap mt-0 mr-[1.5rem] ml-[1.5rem]">
-      <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/4 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
-        <div className="shadow-xl shadow-[(0px 3px 4px 0px rgba(0, 0, 0, 0.03)] mb-[1.5rem] text-[#313b5e] border-0 border-b[#eaedf1] rounded-[0.75rem] py-[1.125rem] px-[1.5rem] bg-transparent bg-white m-[0.75rem] flex box- flex-col">
-          <div className="rounded-[0.75rem]  border-b-[#eaedf1] border-2 mt-0 p-[1.125rem] mb-0 bg-transparent">
+    <div className="flex flex-wrapmt-0  mr-auto ml-auto">
+      <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/4 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+        <div className="shadow-xl shadow-[(0px 3px 4px 0px rgba(0, 0, 0, 0.03)] mb-[1.5rem] text-[#313b5e] border-[1px] border-b-[#eaedf1] rounded-[0.75rem] bg-transparent bg-white m-[0.75rem] flex box- flex-col">
+          <div className="  border-b-[#eaedf1] border-b-[1px] mt-0 p-[1.125rem] mb-0 bg-transparent">
             <h4 className="text-[1rem] font-semibold m-0 flex items-center gap-[0.375rem] text-[#313b5e]"><GiCardboardBoxClosed className="opacity-[1] text-[20px] text-orange-600"/> Categories Settings</h4>
           </div>
           {/* Category Product Count */}
           <div className="flex-shrink-1 flex-grow-1 flex-auto p-[1.5rem]">
             <p>Category Product Count </p>
             <div className="flex gap-3 items-center mb-6">
-              <div className="block min-h-[1.612em] mb-0">
-                <input className="cursor-pointer text-[#ff6c2f]  border-[#ff6c2f] rounded-[50%] float-left ml-[-1.612em] mt-[0.125rem] bg-white w-[1.112em] bg-local m-0  h-[1.112em] align-top appearance-none bg-no-repeat bg-center bg-contain border-[1px] text-inherit leading-normal " type="radio" name="flexRadioDefault" id="flexRadioDefault1" defaultChecked />
+              <div className="block min-h-[1.612em] mb-0 p-8">
+                <input className="cursor-pointer bg-[#ff6c2f]  border-[#ff6c2f] rounded-[50%] float-left ml-[-1.612em] mt-[0.125rem]  w-[1.112em] bg-local m-0  h-[1.112em] align-top appearance-none bg-no-repeat bg-center bg-contain border-[1px] text-inherit leading-normal " type="radio" name="flexRadioDefault" id="flexRadioDefault1" defaultChecked />
                 <label className="cursor-pointer font-medium inline-block" htmlFor="flexRadioDefault1">
                   Yes
                 </label>
@@ -347,39 +346,39 @@ export default function Home() {
       </div>
     
       {/* Allow Reviews */}
-      <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/4 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
-        <div className="shadow-xl shadow-[(0px 3px 4px 0px rgba(0, 0, 0, 0.03)] mb-[1.5rem] text-[#313b5e] border-0 border-b[#eaedf1] rounded-[0.75rem] py-[1.125rem] px-[1.5rem] bg-transparent bg-white m-[0.75rem] flex box- flex-col">
-          <div className="rounded-[0.75rem]  border-b-[#eaedf1] border-2 mt-0 p-[1.125rem] mb-0 bg-transparent">
+      <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/4 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+        <div className="shadow-xl shadow-[(0px 3px 4px 0px rgba(0, 0, 0, 0.03)] mb-[1.5rem] text-[#313b5e] border-[1px] border-b[#eaedf1] rounded-[0.75rem]  bg-transparent bg-white m-[0.75rem] flex box- flex-col">
+          <div className="  border-b-[#eaedf1] border-b-[1px] mt-0 p-[1.125rem] mb-0 bg-transparent">
             <h4 className="text-[1rem] font-semibold m-0 flex items-center gap-[0.375rem] text-[#313b5e]"><iconify-icon icon="solar:chat-square-check-bold-duotone" className="text-primary fs-20" />Reviews Settings</h4>
           </div>
           <div className="flex-shrink-1 flex-grow-1 flex-auto p-[1.5rem]">
             <p>Allow Reviews </p>
-            <div className="flex gap-3 items-center box-center isolate mb-6">
-              <div className="block min-h-[1.612em] isolate mb-0">
+            <div className="flex gap-3 items-center box-center p-8 isolate mb-6">
+              <div className="block min-h-[1.612em] isolate mb-0 ">
                 <input className=" forced-color-adjust-auto cursor-pointer bg-[#ff6c2f] border-[#ff6c2f] rounded-[50%] float-left ml-[-1.612em] mt-[0.125rem] text-white w-[1.112em] bg-local field m-0  h-[1.112em] align-top appearance-none bg-no-repeat bg-center bg-contain border-[1px] text-inherit leading-inherit" type="radio" name="flexRadioDefault2" id="flexRadioDefault3" defaultChecked />
                 <label className="cursor-pointer font-medium inline-block" htmlFor="flexRadioDefault3">
                   Yes
                 </label>
               </div>
-              <div className="block min-h-[1.612em] isolate mb-0 ">
-                <input className="cursor-pointer rounded-[50%] float-left ml-[-1.612em] mt-[0.125rem] bg-white w-[1.112em] h-[1.112em] align-top bg-no-repeat bg-center  bg-contain border-[1px] leading-normal text-inherit forced-color-adjust-auto m-0 " type="radio" name="flexRadioDefault2" id="flexRadioDefault4" style={{border:'rgba(0, 0, 0, 0.175)'}} />
-                <label className="cursor-pointer font-medium inline-block+
+              <div className="block min-h-[1.612em] isolate mb-0 space-x-4 ">
+                <input className="cursor-pointer  rounded-[50%] float-left mt-[0.125rem] bg-white w-[1.112em] h-[1.112em] align-top bg-no-repeat bg-center  bg-contain border-[1px] leading-normal text-inherit forced-color-adjust-auto m-0 " type="radio" name="flexRadioDefault2" id="flexRadioDefault4" style={{border:'rgba(0, 0, 0, 0.175)'}} />
+                <label className="cursor-pointer  font-medium inline-block+
                 " htmlFor="flexRadioDefault4">
                   No
                 </label>
               </div>
             </div>
-            <p className="mt-3 pt-1">Allow Guest Reviews </p>
-            <div className="d-flex gap-2 align-items-center mb-2">
+            <p>Allow Guest Reviews </p>
+            <div className="flex gap-3 items-center box-center space-x-8 isolate mb-6">
               <div className="form-check">
-                <input className="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault5" />
-                <label className="form-check-label" htmlFor="flexRadioDefault5">
+                <input className="cursor-pointer rounded-[50%] float-left mt-[0.125rem]  bg-white w-[1.112em] h-[1.112em] align-top bg-no-repeat bg-center  bg-contain border-[1px] leading-normal text-inherit forced-color-adjust-auto m-0 " type="radio" name="flexRadioDefault3" id="flexRadioDefault5" />
+                <label className="cursor-pointer font-medium inline-blockl" htmlFor="flexRadioDefault5">
                   Yes
                 </label>
               </div>
               <div className="form-check">
-                <input className="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault6" defaultChecked />
-                <label className="form-check-label" htmlFor="flexRadioDefault6">
+                <input className="forced-color-adjust-auto cursor-pointer bg-[#ff6c2f] border-[#ff6c2f] rounded-[50%] float-left ml-[-1.612em] mt-[0.125rem] text-white w-[1.112em] bg-local field m-0  h-[1.112em] align-top appearance-none bg-no-repeat bg-center bg-contain border-[1px] text-inherit leading-inherit" type="radio" name="flexRadioDefault3" id="flexRadioDefault6" defaultChecked />
+                <label className="cursor-pointer font-medium inline-block" htmlFor="flexRadioDefault6">
                   No
                 </label>
               </div>
@@ -403,7 +402,7 @@ export default function Home() {
               </div>
             </form>
             <form>
-              <div className>
+              <div className="mb-[1.5rem] block isolate">
                 <label htmlFor="mex-vouchers" className="mb-[0.4rem] text-[0.875rem] decoration-[#5d7186] font-medium inline-block cursor-default">Maximum Vouchers</label>
                 <input type="number" id="mex-vouchers" className="block w-full pt-[0.5rem] pb-[0.5rem]  pr-[1rem] pl-[1rem] text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-[#ffff] bg-clip-padding border-[1px] border[#d8dfe7] rounded-[0.5rem] transition ease-in-out" placeholder={1000} defaultValue={12} />
               </div>
@@ -553,8 +552,8 @@ export default function Home() {
       </div>
     </div>
     <div className="text-right block isolate">
-      <a href="#!" className="text-white bg-[#ef5f5f] border-[1px] px-[1rem] py-[0.5rem] border-[#ef5f5f] hover:text-white disabled:text-white disabled:bg-[#ef5f5f] disabled:border-[#ef5f5f] hover:bg-[#d75656] shadow shadow-[241, 119, 119] active:text-white active:bg-[#bf4c4c] active:border-[#b34747] active:shadow inset-[0 3px 5px rgba(0, 0, 0, 0.125)]">Cancel</a>
-      <a href="#!" className="btn btn-success">Save Change</a>
+      <Link href="#!" className="text-white bg-[#ef5f5f] leading-[1.5] py-[0.5rem] px-[1rem] inline-block shadow-lg disabled:opacity-[0.65] focus:shadow-[241, 119, 119] border-[1px] border-[#ef5f5f] rounder-[1px] rounded-[#ef5f5f] shadow-[0px 2px 6px 0px] cursor-pointer select-none  text-[ 0.875rem] font-normal border-[1px] px-[1rem] py-[0.5rem] border-[#ef5f5f] hover:text-white disabled:text-white disabled:bg-[#ef5f5f] disabled:border-[#ef5f5f] hover:bg-[#d75656] shadow shadow-[241, 119, 119] active:text-white active:bg-[#bf4c4c] active:border-[#b34747] active:shadow inset-[0 3px 5px rgba(0, 0, 0, 0.125)]">Cancel</Link>
+      <Link href="#!" className="btn btn-success">Save Change</Link>
     </div>
   </div>  
 </div>

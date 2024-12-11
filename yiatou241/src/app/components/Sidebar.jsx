@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { useState } from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import React from "react";
@@ -20,7 +20,7 @@ const Link = [
   },
   {
     id: 3,
-    href: "# ",
+    href: "/categorie",
     icon: <Icon icon="solar:clipboard-list-bold-duotone" />,
     titre: " Category",
   },
@@ -32,7 +32,7 @@ const Link = [
   },
   {
     id: 5,
-    href: "# ",
+    href: "/order",
     icon: <Icon icon="solar:bag-smile-bold-duotone" />,
     titre: "Orders",
   },
@@ -50,7 +50,7 @@ const Link = [
   },
   {
     id: 8,
-    href: "# ",
+    href: "/roles",
     icon: <Icon icon="solar:bill-list-bold-duotone" />,
     titre: "  Invoices",
   },
@@ -64,50 +64,75 @@ const Link = [
 
 export { Link };
 export default function Sidebar() {
+  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
 
 
-  return (
-    <aside className="w-full min-h-screen bg-[#252c33]">
-      <div className=" space-y-10">
-        <div className="flex p-7 justify-between">
-          <a href="index.html" className=" ">
-            <Image
-              className=""
-              src="/logo-light.png"
-              alt="Next.js logo"
-              width={130}
-              height={38}
-              priority
-            />
-          </a>
+    const toggleSidebar = () => {
+      setIsSidebarVisible(!isSidebarVisible);
+    };
+  
+    return (
+      <>
+        {isSidebarVisible && (
+          <aside className="w-full min-h-screen bg-[#252c33]">
+            <div className="space-y-10">
+              {/* Logo et bouton de masquage */}
+              <div className="flex p-7 justify-between">
+                <a href="index.html">
+                  <Image
+                    src="/logo-light.png"
+                    alt="Logo"
+                    width={130}
+                    height={38}
+                    priority
+                  />
+                </a>
+                <button
+                  onClick={toggleSidebar}
+                  type="button"
+                  className="button-sm-hover flex md:hidden"
+                  aria-label="Masquer Sidebar"
+                >
+                  <Icon
+                    icon="solar:double-alt-arrow-left-bold-duotone"
+                    className="text-3xl text-white"
+                  />
+                </button>
+              </div>
+  
+              {/* Liens de la sidebar */}
+              <div className="scrollbar" data-simplebar>
+                <ul className="space-y-1" id="navbar-nav">
+                  <li className="px-7 mb-5 text-[#5b626e]">General</li>
+  
+                  {Link.map((tab) => (
+                    <AdminLink
+                      key={tab.id}
+                      href={tab.href}
+                      icon={tab.icon}
+                      titre={tab.titre}
+                    />
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </aside>
+        )}
+  
+        {/* Bouton pour afficher la sidebar si elle est masquée */}
+        {!isSidebarVisible && (
           <button
+            onClick={toggleSidebar}
             type="button"
-            className="button-sm-hover"
-            aria-label="Show Full Sidebar"
+            className="fixed top-4 left-4 bg-[#252c33] p-3 rounded-full text-white shadow-lg"
+            aria-label="Afficher Sidebar"
           >
             <Icon
               icon="solar:double-alt-arrow-right-bold-duotone"
               className="text-3xl"
             />
           </button>
-        </div>
-
-        <div className="scrollbar" data-simplebar>
-          <ul className="space-y-1" id="navbar-nav">
-            <li className="px-7 mb-5 text-[#5b626e]">General</li>
-
-            {/* Dashboard Link */}
-            {Link.map((tab) => (
-              <AdminLink
-                key={tab.id}
-                href={tab.href}
-                icon={tab.icon}
-                titre={tab.titre}
-              ></AdminLink>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </aside>
-  );
-}
+        )}
+      </>
+    );
+  }
