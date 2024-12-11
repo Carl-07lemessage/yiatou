@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <div className="container-fluid bg-gray-100 sticky top-0 w-full z-[9999]">
       {/* Navbar Header */}
-      <div className="flex justify-between items-center py-4 px-6 bg-white shadow-md rounded-lg transition-all duration-300 ease-in-out">
+      <div className="flex justify-between items-center py-4 bg-white shadow-sm rounded-lg transition-all duration-300 ease-in-out">
         {/* Left Section */}
         <div className="flex items-center space-x-4">
           <h4 className="text-3xl font-semibold text-gray-800 uppercase p-2 transition-colors duration-700 hover:text-orange-600">
