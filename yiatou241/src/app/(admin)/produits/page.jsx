@@ -36,9 +36,11 @@ const ProductTable = () => {
       <div className=" bg-slate-50flex flex justify-between items-center mb-4">
         <h1 className="text-xl font-bold">Liste de tous les produits</h1>
         <div className="flex items-center gap-4">
+          <a href="/produits/creer">
           <button className="bg-orange-500 text-white px-4 py-2 rounded">
             Ajouter un produit
           </button>
+          </a>
           <select className="border-none bg-slate-200  px-3 py-2 rounded">
             <option value="this-month">Ce mois-ci</option>
             <option value="last-month">Télécharger</option>
@@ -99,7 +101,7 @@ const ProductTable = () => {
                 </div>
               </td>
               <td className="border p-2">
-                <div className="flex items-center justify-center gap-3 bg-black h-9">
+                <div className="flex items-center justify-center gap-3 h-9">
                   <button
                     onClick={() => handleView(product.id)}
                     className="text-blue-500"
