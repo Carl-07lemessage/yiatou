@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isNotificationMenuOpen, setNotificationMenuOpen] = useState(false);
@@ -95,7 +96,8 @@ function NotificationMenu({ isOpen, toggleMenu }) {
               key={idx}
               className="flex items-center py-3 border-b hover:bg-gray-50 transition-all duration-300"
             >
-              <img
+              <Image
+                layout="fill"
                 src="assets/images/users/avatar-3.jpg"
                 className="w-8 h-8 rounded-full"
                 alt="avatar"
@@ -125,7 +127,8 @@ function UserDropdown({ isOpen, toggleMenu }) {
         aria-haspopup="true"
         aria-expanded={isOpen}
       >
-        <img
+        <Image
+          layout="fill"
           src="assets/images/users/avatar-3.jpg"
           className="w-8 h-8 rounded-full"
           alt="avatar"
