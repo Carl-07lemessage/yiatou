@@ -66,10 +66,10 @@ export default function Home() {
                   </div>
                 </form>
               </div>
-              <div className="position relative flex-shrink-0  w-full max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+              <div className=" flex-shrink-0  w-full max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <div className="flex flex-col">
                   <label htmlFor="description" className="mb-[0.4rem] text-[ 0.875rem] font-medium text-[#5d7186]">Description</label>
-                  <textarea className="block mb-[10px] cursor-pointer position relative overflow-hidden text-sm w-full p-[1rem] text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] rounded-[0.5rem] ease-in-out duration-[0.15s] delay-0 " id="description" rows={4} placeholder="Type description" defaultValue={""} />
+                  <textarea className="block mb-[10px] cursor-pointer    overflow-hidden text-sm w-full p-[1rem] text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-white bg-clip-padding border-[1px] rounded-[0.5rem] ease-in-out duration-[0.15s] delay-0 " id="description" rows={4} placeholder="Type description" defaultValue={""} />
                 </div>
               </div>
             </div>
@@ -118,14 +118,14 @@ export default function Home() {
                 </form>
               </div>
               {/* full address */}
-              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-full max-w-full pr-[1.5rem] pl-[1.5rem] m-0 block">
+              <div className=" flex-grow-0 flex-shrink-0 flex-auto w-full max-w-full pr-[1.5rem] pl-[1.5rem] m-0 block">
                 <div className="mb-[1.5rem] block">
                   <label htmlFor="address" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Full Address</label>
                   <textarea className="min-h-[1px] bg-[#fcfcfd] block w-full pt-[0.5rem] pb-[0.5rem] pr-[1rem] pl-[1rem] text-[0.875rem] font-normal leading-[1.5] text-[#5d7186] appearance-none bg-clip-padding border-[1px] border-[#d8dfe7] rounded-[0.5rem] transition ease-in-out shadow shadow-[0.15s] resize-y m-0" id="address" rows={3} placeholder="Type address" defaultValue={""} />
                 </div>
               </div>
               {/* zip code  */}
-              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/3 max-w-full  pr-[1.5rem] pl-[1.5rem] m-0 block">
+              <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/3 max-w-full  pr-[1.5rem] pl-[1.5rem] m-0 block">
                 <form className="block mt-[0em]">
                   <div className="mb-[1.5rem] block">
                     <label htmlFor="your-zipcode" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Zip-Code</label>
@@ -134,7 +134,7 @@ export default function Home() {
                 </form>
               </div>
               {/* city */}
-              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/3 max-w-full  pr-[1.5rem] pl-[1.5rem] m-0 block">
+              <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/3 max-w-full  pr-[1.5rem] pl-[1.5rem] m-0 block">
                 <form className="block mt-[0em]">
                   <div className="mb-[1.5rem] block">
                     <label htmlFor="choices-city" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">City</label>
@@ -176,7 +176,7 @@ export default function Home() {
                   </div>
                 </form>
               </div>
-              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/3">
+              <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/3">
                 <form className="block mt-[0em]">
                   <label htmlFor="choices-country" className="mb-[0.4rem] text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Country</label>
                   <select className="cursor-pointer m-0 position relative overflow-hidden text-[16px] border-[1px] p-2  w-full rounded-[0.5rem]  block" id="choices-country" data-choices data-choices-groups data-placeholder="Select Country" name="choices-country">
@@ -212,7 +212,7 @@ export default function Home() {
           </div>
           <div className="flex-shrink-1 flex-grow-1 flex-auto p-[1.5rem]">
             <div className="flex flex-wrap mt-0 mr-[1.5rem] ml-[1.5rem]">
-              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+              <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <form  className="block mt-[0em]">
                   <div className="mb-[1.5rem] block">
                     <label htmlFor="choices-country1" className="mb-[0.4rem] p-2 text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Country</label>
@@ -235,7 +235,7 @@ export default function Home() {
                   </div>
                 </form>
               </div>
-              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+              <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <form  className="block mt-[0em]">
                   <div className="mb-[1.5rem] block">
                     <label htmlFor="choices-language" className="mb-[0.4rem] p-2  text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Language</label>
@@ -258,7 +258,7 @@ export default function Home() {
                   </div>
                 </form>
               </div>
-              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+              <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <form className="block mt-[0em]">
                   <div className="mb-[1.5rem] block">
                     <label htmlFor="choices-currency" className="mb-[0.4rem] p-2 text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Currency</label>
@@ -276,7 +276,7 @@ export default function Home() {
                   </div>
                 </form>
               </div>
-              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+              <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <form className="block mt-[0em]">
                   <div className="mb-[1.5rem] block">
                     <label htmlFor="choices-length" className="mb-[0.4rem] p-2 text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Length Class</label>
@@ -290,7 +290,7 @@ export default function Home() {
                   </div>
                 </form>
               </div>
-              <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+              <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/2 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
                 <form>
                   <div className="mb-[1.5rem] block">
                     <label htmlFor="choices-weight" className="mb-[0.4rem] p-2 text-[0.875rem] font-medium text-[#5d7186] inline-block cursor-default">Weight Class</label>
@@ -389,8 +389,8 @@ export default function Home() {
 
 
       {/* Vouchers Settings */}
-      <div className="position relative flex-grow-0 flex-shrink-0 flex-auto w-1/4 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
-        <div className="shadow shadow-[(0px 3px 4px 0px rgba(0, 0, 0, 0.03)] mb-[1.5rem] space-y-[1.5rem] space-x-[1.5rem] decoration-[#313b5e] border-0 border-[#eaedf1] m-[0.75rem] rounded-[0.75rem] py-[1.125rem] position relative flex flex-col min-w-0 break-words bg-white bg-clip-border isolate  px-[1.5rem] bg-[#00000000]">
+      <div className="   flex-grow-0 flex-shrink-0 flex-auto w-1/4 max-w-full pr-[1.5rem] pl-[1.5rem] mt-0">
+        <div className="shadow shadow-[(0px 3px 4px 0px rgba(0, 0, 0, 0.03)] mb-[1.5rem] space-y-[1.5rem] space-x-[1.5rem] decoration-[#313b5e] border-0 border-[#eaedf1] m-[0.75rem] rounded-[0.75rem] py-[1.125rem]    flex flex-col min-w-0 break-words bg-white bg-clip-border isolate  px-[1.5rem] bg-[#00000000]">
           <div className="rounded-[0.75rem] mt-0 border-b-[#eaedf1] border-[1px] py-[1.125rem] px-[1.5rem] mb-0 bg-[#00000000] block isolate">
             <h4 className="text-[1rem] font-semibold m-0 gap-[0.375rem items-center flex] decoration-[#313b5e]"><iconify-icon icon="solar:ticket-bold-duotone" className="text-[20px] opacity-[1] text-orange-600" />Vouchers Settings</h4>
           </div>

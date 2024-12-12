@@ -1,16 +1,17 @@
 "use client";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isNotificationMenuOpen, setNotificationMenuOpen] = useState(false);
   const [isUserMenuOpen, setUserMenuOpen] = useState(false);
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);  // Gestion du menu mobile
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false); // Gestion du menu mobile
 
   return (
-    <div className="container-fluid bg-gray-100 sticky top-0 w-full z-[9999]">
+    <div className="container-fluid bg-gray-100 sticky top-0 w-[100%] z-[9999]">
       {/* Navbar Header */}
-      <div className="flex justify-between items-center py-4 bg-white shadow-sm rounded-lg transition-all duration-300 ease-in-out">
+      <div className="flex justify-around w-[100%] sticky top-0 z-[9999] items-center py-4 bg-white shadow-sm transition-all duration-300 ease-in-out">
         {/* Left Section */}
         <div className="flex items-center space-x-4">
           <h4 className="text-1xl font-semibold text-gray-800 uppercase p-2 transition-colors duration-700 hover:text-orange-600">
@@ -21,12 +22,12 @@ export default function Navbar() {
         {/* Right Section */}
         <div className="flex items-center gap-4">
           {/* Toggle Button for Mobile Menu */}
-          <button 
+          <button
             className="block lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-all duration-300"
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle Navigation"
           >
-            <Icon icon="bx:menu" className="text-xl" />
+            <Icon icon="bx:menu" className="text-xl" width="20" height="20" />
           </button>
 
           {/* Notification Menu */}
@@ -55,7 +56,7 @@ export default function Navbar() {
           >
             <Icon
               icon="solar:clock-circle-bold-duotone"
-              className="text-xl w-6 h-6 align-middle transition-transform duration-300 hover:scale-150"
+              className="text-xl align-middle transition-transform duration-300 hover:scale-150"
             />
           </button>
 
@@ -82,20 +83,14 @@ export default function Navbar() {
             className="p-2 text-gray-800 hover:text-orange-600"
             aria-label="Settings"
           >
-            <Icon
-              icon="solar:settings-bold-duotone"
-              className="text-xl"
-            />
+            <Icon icon="solar:settings-bold-duotone" className="text-xl" />
           </a>
           <button
             type="button"
             className="p-2 text-gray-800 hover:text-orange-600"
             aria-label="Clock"
           >
-            <Icon
-              icon="solar:clock-circle-bold-duotone"
-              className="text-xl"
-            />
+            <Icon icon="solar:clock-circle-bold-duotone" className="text-xl" />
           </button>
           <UserDropdown
             isOpen={isUserMenuOpen}
@@ -123,7 +118,7 @@ function NotificationMenu({ isOpen, toggleMenu }) {
       >
         <Icon
           icon="solar:bell-bing-bold-duotone"
-          className="text-xl align-middle w-6 h-6 hover:scale-105"
+          className="text-xl align-middle hover:scale-105"
         />
         <span className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
           3
@@ -140,9 +135,11 @@ function NotificationMenu({ isOpen, toggleMenu }) {
               key={idx}
               className="flex items-center py-3 border-b hover:bg-gray-50 transition-all duration-300"
             >
-              <img
-                src="assets/images/users/avatar-3.jpg"
-                className="w-8 h-8 rounded-full"
+              <Image
+                src="/facebook-circle-fill.svg"
+                className=" rounded-full"
+                width={50}
+                height={50}
                 alt="avatar"
               />
               <div>
@@ -170,9 +167,11 @@ function UserDropdown({ isOpen, toggleMenu }) {
         aria-haspopup="true"
         aria-expanded={isOpen}
       >
-        <img
-          src="assets/images/users/avatar-3.jpg"
-          className="w-8 h-8 rounded-full"
+        <Image
+          src="/google-remove.png"
+          className=" rounded-full"
+          width={30}
+          height={30}
           alt="avatar"
         />
         <span className="font-medium text-gray-800">Gaston</span>
@@ -184,21 +183,21 @@ function UserDropdown({ isOpen, toggleMenu }) {
             href="pages-profile.html"
             className="flex items-center gap-4 text-gray-800 hover:text-blue-600 transition-colors duration-300"
           >
-            <Icon icon="bx:user-circle" />
+            <Icon icon="bx:user-circle" width="20" height="20" />
             Profile
           </a>
           <a
             href="apps-chat.html"
             className="flex items-center gap-4 text-gray-800 hover:text-blue-600 transition-colors duration-300"
           >
-            <Icon icon="bx:message-dots" />
+            <Icon icon="bx:message-dots" width="20" height="20" />
             Messages
           </a>
           <a
             href="auth-signin.html"
             className="flex items-center gap-4 text-red-600 hover:text-red-700 transition-colors duration-300"
           >
-            <Icon icon="bx:log-out" /> 
+            <Icon icon="bx:log-out " width="20" height="20" />
             Déconnexion
           </a>
         </div>
