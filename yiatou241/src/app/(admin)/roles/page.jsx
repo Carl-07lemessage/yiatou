@@ -143,17 +143,19 @@ const WorkspaceTable = () => {
           {/* Utilisateurs */}
           <div className="flex-1 flex -space-x-2">
             <Image
-              src="https://via.placeholder.com/32"
+              src="/https://via.placeholder.com/32"
               alt="User 1"
-              layout="fill"
+              width={100}
+              height={100}
               className="w-8 h-8 rounded-full border-2 border-white"
             />
             <div className="w-8 h-8 flex items-center justify-center bg-pink-500 text-white text-sm font-bold rounded-full border-2 border-white">
               P
             </div>
             <Image
-              src="https://via.placeholder.com/32"
-              layout="fill"
+              src="/google.png"
+              width={100}
+              height={100}
               alt="User 2"
               className="w-8 h-8 rounded-full border-2 border-white"
             />

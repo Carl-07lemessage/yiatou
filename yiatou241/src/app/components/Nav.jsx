@@ -98,7 +98,7 @@ function NotificationMenu({ isOpen, toggleMenu }) {
             >
               <Image
                 layout="fill"
-                src="assets/images/users/avatar-3.jpg"
+                src="/assets/images/users/avatar-3.jpg"
                 className="w-8 h-8 rounded-full"
                 alt="avatar"
               />
@@ -129,7 +129,7 @@ function UserDropdown({ isOpen, toggleMenu }) {
       >
         <Image
           layout="fill"
-          src="assets/images/users/avatar-3.jpg"
+          src="/assets/images/users/avatar-3.jpg"
           className="w-8 h-8 rounded-full"
           alt="avatar"
         />

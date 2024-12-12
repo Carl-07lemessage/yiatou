@@ -124,7 +124,7 @@ const ProduitInformation = () => {
               <button
                 key={sizeOption}
                 onClick={() => handleSizeChange(sizeOption)}
-                className={`px-4 py-2 rounded-lg text-white ${size.includes(sizeOption) ? 'bg-blue-500' : 'bg-gray-300'} transition duration-300 transform hover:scale-105`}
+                className={`px-4 py-2 rounded-lg text-white ${size.includes(sizeOption) ? 'bg-blue-500' : 'bg-gray-300'} transition duration-300  hover:scale-105`}
               >
                 {sizeOption}
               </button>
@@ -139,7 +139,7 @@ const ProduitInformation = () => {
               <button
                 key={colorName}
                 onClick={() => handleColorChange(colorName)}
-                className={`w-10 h-10 rounded-full transition duration-300 transform hover:scale-110 ${colors.includes(colorName) ? 'border-4 border-blue-500' : 'border-2 border-gray-300'}`}
+                className={`w-10 h-10 rounded-full transition duration-300  hover:scale-110 ${colors.includes(colorName) ? 'border-4 border-blue-500' : 'border-2 border-gray-300'}`}
                 style={{ backgroundColor: colorHex }}
               />
             ))}
@@ -194,11 +194,6 @@ const ProduitInformation = () => {
               <option value="accessoires">Accessoires</option>
             </select>
           </div>
-          {/* <div className='bg-slate-500 '>
-            <button className="w-full p-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">
-              Enregistrer
-            </button>
-          </div> */}
         </div>
       </div>
     </div>
