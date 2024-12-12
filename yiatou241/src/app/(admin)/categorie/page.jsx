@@ -28,25 +28,25 @@ export default function Home() {
     {
       id: "cat1",
       name: "Catégories de Mode",
-      img: "/assets/images/product/p-1.png",
+      img: "/public/google-remove.png",
       bgColor: "bg-gray-200",
     },
     {
       id: "cat2",
       name: "Casques Électroniques",
-      img: "/assets/images/product/p-6.png",
+      img: "/public/google-remove.png",
       bgColor: "bg-blue-200",
     },
     {
       id: "cat3",
       name: "Chaussures",
-      img: "/assets/images/product/p-7.png",
+      img: "/public/google-remove.png",
       bgColor: "bg-yellow-200",
     },
     {
       id: "cat4",
       name: "Lunettes & Solaires",
-      img: "/assets/images/product/p-9.png",
+      img: "/public/google-remove.png",
       bgColor: "bg-teal-200",
     },
   ];
@@ -55,7 +55,7 @@ export default function Home() {
     {
       id: "FS16276",
       name: "Mode Hommes, Femmes & Enfants",
-      img: "/logo-light.png",
+      img: "/public/google-remove.png",
       price: "$80 à $400",
       createdBy: "Vendeur",
       stock: 46233,
