@@ -36,11 +36,13 @@ export default function Home() {
     {
       id: "cat3",
       name: "Chaussures",
+      Image: "assets/images/product/p-7.png",
       bgColor: "bg-yellow-200",
     },
     {
       id: "cat4",
       name: "Lunettes & Solaires",
+      Image: "assets/images/product/p-9.png",
       bgColor: "bg-teal-200",
     },
   ];
@@ -49,6 +51,7 @@ export default function Home() {
     {
       id: "FS16276",
       name: "Mode Hommes, Femmes & Enfants",
+      Image: "assets/images/product/p-1.png",
       price: "$80 à $400",
       createdBy: "Vendeur",
       stock: 46233,
