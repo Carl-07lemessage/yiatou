@@ -136,10 +136,9 @@ function NotificationMenu({ isOpen, toggleMenu }) {
               className="flex items-center py-3 border-b hover:bg-gray-50 transition-all duration-300"
             >
               <Image
-                src="/facebook-circle-fill.svg"
-                className=" rounded-full"
-                width={50}
-                height={50}
+                layout="fill"
+                src="/assets/images/users/avatar-3.jpg"
+                className="w-8 h-8 rounded-full"
                 alt="avatar"
               />
               <div>
@@ -168,10 +167,9 @@ function UserDropdown({ isOpen, toggleMenu }) {
         aria-expanded={isOpen}
       >
         <Image
-          src="/google-remove.png"
-          className=" rounded-full"
-          width={30}
-          height={30}
+          layout="fill"
+          src="/assets/images/users/avatar-3.jpg"
+          className="w-8 h-8 rounded-full"
           alt="avatar"
         />
         <span className="font-medium text-gray-800">Gaston</span>

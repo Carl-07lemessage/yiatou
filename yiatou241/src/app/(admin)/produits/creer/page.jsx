@@ -31,8 +31,9 @@ const ProductCard = () => {
       <div className="w-full md:w-1/3 bg-white p-4 rounded-md shadow-md">
         <div className="w-full h-40 bg-gray-200 rounded-md flex items-center justify-center">
           <Image
-          layout="fill"
-            src={image || "URL_DE_L_IMAGE"}
+          width={100}
+          height={100}
+            src={image || "/URL_DE_L_IMAGE"}
             alt="Men Black Slim Fit T-shirt"
             className="h-full w-full object-contain"
           />
@@ -49,14 +50,14 @@ const ProductCard = () => {
         <div>
           {/* Section Size */}
           <h5 className="text-sm font-medium text-gray-700 mt-4">Taille</h5>
-          <div className="flex gap-2 flex-wrap mt-2">
+          <div className="flex gap-2 mt-2">
             {['XS', 'S', 'M', 'L', 'XL', 'XXL'].map((sizeOption) => (
-              <button
+              <a
                 key={sizeOption}
-                className="px-4 py-2 text-sm rounded-lg text-white bg-blue-500 transition-transform transform hover:scale-105"
+                className="px-4 py-2 text-sm rounded-lg text-white bg-blue-500 transition-transform  hover:scale-105"
               >
                 {sizeOption}
-              </button>
+              </a>
             ))}
           </div>
 
@@ -73,11 +74,11 @@ const ProductCard = () => {
           </div>
         </div>
 
-        <div className="flex justify-evenly mt-6">
-          <button className="w-28 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-transform transform hover:scale-105">
+        <div className="flex justify-evenly mt-6 ">
+          <button className="w-28 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-transform  hover:scale-105">
             Ajouter
           </button>
-          <button className="w-28 py-2 bg-orange-400 text-white rounded-md hover:bg-orange-600 transition-transform transform hover:scale-105">
+          <button className="w-28 py-2 bg-orange-400 text-white rounded-md hover:bg-orange-600 transition-transform hover:scale-105">
             Annuler
           </button>
         </div>
@@ -94,7 +95,7 @@ const ProductCard = () => {
             </label>
             <input id="file-upload" type="file" accept="image/*" onChange={handleImageChange} className="hidden" />
             {image && (
-              <Image layout="fill" src={image} alt="Aperçu" className="mt-4 h-40 w-full object-cover rounded-lg border" />
+              <Image width={100} height={100} src={image} alt="Aperçu" className="mt-4 h-40 w-full object-cover rounded-lg border" />
             )}
             <p className="text-gray-600 text-center mt-4">
               Déposez vos images ici, ou{" "}

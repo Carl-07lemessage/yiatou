@@ -76,10 +76,11 @@ const ProductTable = () => {
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gray-200 rounded-md">
                    <Image 
-                   src="file.svg" 
-                   layout="fill"
+                   src="/google-remove.png" 
+                   width={100}
+                   height={100}
                    alt="description de l'image" 
-                   className="w-full h-full object-cover rounded-md" 
+                   className="w-10 h-10 object-cover rounded-md" 
                    />
                   </div>
 
