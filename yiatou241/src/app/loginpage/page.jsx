@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import Image from "next/image";
 
 export default function LoginPage() {
   const handleGoogleLogin = () => {
@@ -72,7 +73,7 @@ export default function LoginPage() {
             onClick={handleGoogleLogin}
             className="flex-1 flex items-center justify-center bg-white-500 text-black py-2 rounded-lg hover:bg-white-600 transition"
           >
-              <img src="/google-remove.png" alt="/google.png" className="w-[24px] h-[24px]" />
+              <Image layout="fill" src="/google-remove.png" alt="/google.png" className="w-[24px] h-[24px]" />
 
           </button>
 
@@ -80,7 +81,7 @@ export default function LoginPage() {
             onClick={handleFacebookLogin}
             className="flex-1 flex items-center justify-center bg-white-600 text-white py-2 rounded-lg hover:bg-white-700 transition"
           >
-            <img src="/facebook-circle-fill.svg" alt="/google.png" className="w-[24px] h-[24px]" />
+            <Image layout="fill" src="/facebook-circle-fill.svg" alt="/google.png" className="w-[24px] h-[24px]" />
             
             Facebook
           </button>
