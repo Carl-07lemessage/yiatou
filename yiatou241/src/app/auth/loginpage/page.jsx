@@ -10,7 +10,7 @@ export default function LoginPage() {
         <div className="auth-logo mb-6 flex justify-start space-x-4">
           {/* Logo */}
           <a href="index.html" className="block">
-            <img
+            <Image
               src="/logo-dark.png"
               alt="Logo dark"
               className="h-8 sm:h-6"
@@ -23,7 +23,7 @@ export default function LoginPage() {
         </h1>
         <p className="text-gray-600 text-center md:text-start">
           Entrez votre nom et votre mot de passe pour accéder au panneau
-          d'administration.
+          d&apos;administration.
         </p>
 
         <form className="w-full max-w-sm mx-auto md:mx-0">
@@ -32,7 +32,7 @@ export default function LoginPage() {
               htmlFor="nam"
               className="block text-sm font-medium text-gray-700"
             >
-              Nom d'utilisateur
+              Nom d&apos;utilisateur
             </label>
             <input
               type="text"
@@ -94,7 +94,7 @@ export default function LoginPage() {
       {/* Section droite */}
       <div className="hidden md:flex w-full md:w-1/2 h-full items-center justify-center bg-white">
         <div className="w-full max-w-lg p-4 md:p-6">
-          <img
+          <Image
             src="/img-10.jpg"
             alt="Image description"
             className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-lg shadow-lg"
