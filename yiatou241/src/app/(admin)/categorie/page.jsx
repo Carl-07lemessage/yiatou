@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { Icon } from "@iconify/react";
+import Image from "next/image"
 
 export default function Home() {
   const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -27,25 +28,25 @@ export default function Home() {
     {
       id: "cat1",
       name: "Catégories de Mode",
-      img: "assets/images/product/p-1.png",
+      img: "/public/google-remove.png",
       bgColor: "bg-gray-200",
     },
     {
       id: "cat2",
       name: "Casques Électroniques",
-      img: "assets/images/product/p-6.png",
+      img: "/public/google-remove.png",
       bgColor: "bg-blue-200",
     },
     {
       id: "cat3",
       name: "Chaussures",
-      img: "assets/images/product/p-7.png",
+      img: "/public/google-remove.png",
       bgColor: "bg-yellow-200",
     },
     {
       id: "cat4",
       name: "Lunettes & Solaires",
-      img: "assets/images/product/p-9.png",
+      img: "/public/google-remove.png",
       bgColor: "bg-teal-200",
     },
   ];
@@ -54,7 +55,7 @@ export default function Home() {
     {
       id: "FS16276",
       name: "Mode Hommes, Femmes & Enfants",
-      img: "assets/images/product/p-1.png",
+      img: "/public/google-remove.png",
       price: "$80 à $400",
       createdBy: "Vendeur",
       stock: 46233,
@@ -62,7 +63,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="container mt-2 mx-auto px-4">
+    <div className="container mt-2 mx-auto  px-4">
       {/* Grid des catégories */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {categories.map((category) => (
@@ -74,10 +75,12 @@ export default function Home() {
               <div
                 className={`${category.bgColor} rounded-full flex items-center justify-center mx-auto p-6 hover:bg-opacity-80 transition-all duration-300`}
               >
-                <img
+                <Image
                   src={category.img}
                   alt={category.name}
-                  className="w-24 h-24 object-cover transition-transform transform hover:scale-110"
+                  height={48}
+                  width={48}
+                  className="object-cover transition-transform transform hover:scale-110"
                 />
               </div>
               <h4 className="mt-3 mb-0 text-lg font-semibold text-gray-700 transition-all duration-300 hover:text-orange-500">
@@ -108,7 +111,7 @@ export default function Home() {
                 Ce mois-ci
               </button>
               {dropdownVisible && (
-                <div className="dropdown-menu absolute right-0 mt-2 bg-white shadow-lg rounded-lg w-48 transition-all duration-300 opacity-100">
+                <div className="dropdown-menu  right-0 mt-2 bg-white shadow-lg rounded-lg w-48 transition-all duration-300 opacity-100">
                   <a
                     href="#!"
                     className="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition-all duration-300"
@@ -161,11 +164,13 @@ export default function Home() {
                     <td className="px-4 py-2">
                       <div className="flex items-center gap-2">
                         <div className="rounded bg-gray-200 w-16 h-16 flex items-center justify-center">
-                          <img
+                          <Image
                             src={product.img}
                             alt={product.name}
-                            className="w-full h-full object-cover transition-transform transform hover:scale-110"
-                          />
+                            width={100}
+                            height={100}
+                            className="w-12 object-cover transition-transform transform hover:scale-110"
+                          />git 
                         </div>
                         <p className="text-gray-800 font-medium text-sm">{product.name}</p>
                       </div>
