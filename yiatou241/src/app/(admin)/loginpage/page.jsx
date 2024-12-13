@@ -32,7 +32,7 @@ export default function LoginPage() {
               htmlFor="nam"
               className="block text-sm font-medium text-gray-700"
             >
-              Nom
+              Nom d'utilisateur
             </label>
             <input
               type="text"
@@ -89,12 +89,6 @@ export default function LoginPage() {
           </button>
         </form>
 
-        <div className="mt-6 text-sm text-gray-600 text-center md:text-start">
-          Vous n'avez pas de compte ?{" "}
-          <a href="#" className="text-orange-600 hover:underline">
-            Inscrivez-vous
-          </a>
-        </div>
       </div>
 
       {/* Section droite */}
