@@ -1,7 +1,7 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import Chart from "chart.js/auto";
+import {Chart} from "chart.js/auto";
 
 import { useEffect, useRef } from "react";
 
