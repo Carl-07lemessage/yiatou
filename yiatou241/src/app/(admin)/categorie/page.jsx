@@ -91,7 +91,7 @@ export default function Home() {
         ))}
       </div>
 
-      {/* Liste des produits */}
+      {/* Liste de tous les produis */}
       <div className="mt-8">
         <div className="card shadow-lg rounded-lg overflow-hidden">
           <div className="card-header flex justify-between items-center p-4 bg-gray-100">
